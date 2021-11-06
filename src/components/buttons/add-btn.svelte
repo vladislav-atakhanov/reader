@@ -3,31 +3,13 @@ import { books } from "../../store"
 
 let className
 export { className as class }
-
-async function submit(e) {
-
-	for (const file of e.target.files) {
-		const reader = new FileReader()
-		const id = file.name
-
-		reader.readAsText(file)
-		reader.onload = e => {
-			const data = reader.result
-
-			books.add(id, {
-				data, inited: false
-			})
-		}
-	}
-
-}
 </script>
 
-<label class="add-book">
-	<input type="file" on:input="{submit}" multiple accept=".fb2">
-	<span class="btn btn--add {className}">
-		+
-	</span>
+<label class="add-book btn btn--add {className}">
+	<input type="file" on:input="{e => books.addFiles(e.target.files)}" multiple accept=".fb2">
+	<svg width="14" viewBox="0 0 14 14">
+		<path d="M13 7H1m6-6v12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+	  </svg>
 </label>
 
 <style>

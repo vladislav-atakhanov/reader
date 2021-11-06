@@ -4,9 +4,7 @@ import { books } from "../../store";
 
 
 <div class="wrapper">
-	<label
-	class="drag"
-	>
+	<label class="drag">
 		<h1 class="drag__title">Выберите файлы</h1>
 		<input
 			type="file"
@@ -38,7 +36,7 @@ import { books } from "../../store";
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	padding: 2em 0;
+	padding: 2em 1em;
 	border-style: dashed;
 	border-color: var(--text);
 	border-width: 3px;

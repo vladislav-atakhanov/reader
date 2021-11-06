@@ -28,7 +28,7 @@ function drop(e) {
 
 <Screen name="home">
 	{#if $books.listId}
-		<BookList list={$books.listId} />
+		<BookList list={$books.listId || []} />
 		<Dropper />
 	{:else}
 		<BookSelect />

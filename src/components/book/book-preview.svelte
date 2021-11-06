@@ -23,8 +23,9 @@ const clickHandler = e => {
 }
 
 </script>
+
 {#if book && book.inited}
-	<article class="book-preview" data-book="{id}" on:click="{clickHandler}">
+	<article class="book-preview {cover && 'book-preview--cover'}" data-book={id} on:click="{clickHandler}">
 		<div class="book-preview__description">
 			<h3 class="book-preview__title">{title}</h3>
 			<p class="book-preview__author">{author}</p>
@@ -43,16 +44,19 @@ const clickHandler = e => {
 <style>
 .book-preview {
 	position: relative;
-	height: var(--height);
 	overflow: hidden;
 	border-radius: 3rem;
-	padding: 0;
 	transition: .5s all;
 	display: grid;
-	grid-template-columns: auto min-content;
-
+	width: 100%;
+	max-width: 450px;
 	--shadow-color: rgb(0 0 0 / .25);
 	box-shadow: 0 .5rem 1rem 0 var(--shadow-color);
+	padding: 1em;
+}
+
+.book-preview--cover {
+	padding-right: 100px;
 }
 .book-preview:hover {
 	--shadow-color: rgb(0 0 0 / .5);
@@ -61,13 +65,16 @@ const clickHandler = e => {
 .book-preview__description {
 	display: grid;
 	align-self: center;
-	padding-left: 5rem;
-	padding-right: 5rem;
+	padding: 0 1em;
 	order: -1;
 }
 .book-preview__cover {
 	display: block;
-	height: var(--height);
+	right: 0;
+	height: 100%;
+	max-width: 100px;
+	object-fit: cover;
+	position: absolute;
 }
 .book-preview__title,
 .book-preview__author {
@@ -87,7 +94,6 @@ const clickHandler = e => {
 .book-preview__progress {
 	text-align: right;
 	color: var(--text);
-	/* position: absolute; */
 }
 .progress__bar {
 	margin-top: 1rem;
