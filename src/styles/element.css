@@ -1,0 +1,13 @@
+.element,
+.settings__field,
+.book-preview,
+.header__controls,
+.chapters__list {
+	background-color: var(--element-bg);
+	border-radius: 1rem;
+	padding: 1rem;
+	color: var(--element-text);
+	box-shadow: 0 .5rem 1rem 0 rgb(0 0 0 / .25);
+	transition: all .5s;
+	position: relative;
+}

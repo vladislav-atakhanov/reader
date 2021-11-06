@@ -1,0 +1,32 @@
+.popup {
+	left: 1rem;
+	display: grid;
+	padding: 1em;
+	border-radius: 1rem;
+	background-color: var(--popup-bg);
+	gap: 2rem;
+	box-shadow: 0 1rem 2rem 0 rgb(0 0 0 / .25);
+
+	max-height: calc(100vh - 7.5rem);
+	overflow-y: auto;
+	max-width: 400px;
+}
+.popup::-webkit-scrollbar {
+	width: 0;
+}
+
+.popup-wrapper {
+	margin-top: 4.5rem;
+	padding-top: 2rem;
+	padding-left: 1rem;
+	position: absolute;
+	transition: .5s all ease-in-out;
+	left: 0;
+	top: 0;
+	transform: translateX(calc(-100% - 1rem));
+}
+
+.popup-wrapper--active,
+.popup-wrapper:hover {
+	transform: translateX(0);
+}

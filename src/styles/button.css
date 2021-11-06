@@ -1,0 +1,22 @@
+.btn {
+	padding: 0;
+	margin: 0;
+	border: none;
+
+	background-color: var(--bg);
+	color: var(--text);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: .5rem;
+	transition: .1s all;
+}
+.btn:hover {
+	transform: scale(1.2);
+	background-color: var(--text);
+	color: var(--bg);
+}
+.btn svg {
+	fill: currentColor;
+	display: block;
+}

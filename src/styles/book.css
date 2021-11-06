@@ -1,0 +1,74 @@
+
+.book section > p::before  {
+	content: "";
+	display: inline-block;
+	width: 3em;
+}
+.book section > p {
+	font-size: calc(var(--font-size) * 1px);
+	line-height: 1.25;
+	text-align: justify;
+	margin: 0;
+	padding: 0;
+}
+
+.book .epigraph {
+	width: 70%;
+	text-align: right;
+	margin-left: auto;
+}
+.book .epigraph p {
+	margin: 0;
+}
+.book .text-author {
+	font-style: italic;
+}
+
+.book h2,
+.book h3 {
+	margin: 0;
+	padding: 0;
+}
+.book h2,
+.book h3 {
+	line-height: calc(var(--font-size) * 2px * var(--line-height));
+	text-align: center;
+}
+.book h3 {
+	font-size: calc(var(--font-size) * 1px);
+	line-height: var(--line-height);
+}
+.book section {
+	margin-top: calc(1em * var(--line-height));
+}
+
+.book .stanza {
+	text-align: center;
+	font-style: italic;
+}
+.book .poem {
+	display: flex;
+	justify-content: center;
+}
+.book .v {
+	margin: 0;
+	width: max-content;
+}
+
+.book .description {
+	display: none;
+}
+
+.book binary {
+	display: none;
+}
+
+.book .cite p:first-child:before {
+	content: '«';
+}
+.book .cite p:last-child:after {
+	content: '»';
+}
+.book .cite p {
+	margin: 0;
+}

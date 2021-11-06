@@ -1,0 +1,42 @@
+@font-face {
+    font-family: PlayfairDisplay;
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(/fonts/PlayfairDisplay/PlayfairDisplay-Bold.ttf) format('opentype');
+}
+@font-face {
+    font-family: PlayfairDisplay;
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url(/fonts/PlayfairDisplay/PlayfairDisplay-BoldItalic.ttf) format('opentype');
+}
+@font-face {
+    font-family: PlayfairDisplay;
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/fonts/PlayfairDisplay/PlayfairDisplay-Italic.ttf) format('opentype');
+}
+@font-face {
+    font-family: PlayfairDisplay;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/fonts/PlayfairDisplay/PlayfairDisplay-Regular.ttf) format('opentype');
+}
+@font-face {
+    font-family: PlayfairDisplay;
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(/fonts/PlayfairDisplay/PlayfairDisplay-SemiBold.ttf) format('opentype');
+}
+@font-face {
+    font-family: PlayfairDisplay;
+    font-style: italic;
+    font-weight: 600;
+    font-display: swap;
+    src: url(/fonts/PlayfairDisplay/PlayfairDisplay-SemiBoldItalic.ttf) format('opentype');
+}

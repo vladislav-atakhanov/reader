@@ -1,0 +1,41 @@
+.theme--sepia {
+	--bg: #F0DEC6;
+	--text: #654D33;
+
+	--popup-bg: #CCA766;
+
+	--element-text: #000;
+	--element-bg: #ECC279
+}
+.theme--sepia-contrast {
+	--bg: #f0dec6;
+	--text: #000002;
+
+	--popup-bg: #CCA766;
+
+	--element-text: #000;
+	--element-bg: #ECC279
+}
+
+.theme--day {
+	--bg: #fff;
+	--text: #000;
+}
+
+.theme--night {
+	--bg: #000;
+	--text: #a1a1a1;
+}
+.theme--night-contrast {
+	--bg: #000;
+	--text: #fff;
+}
+
+.theme--console {
+	--bg: #000;
+	--text: #080;
+}
+.theme--dusk {
+	--bg: #2b2b2b;
+	--text: #a8b8c7;
+}
