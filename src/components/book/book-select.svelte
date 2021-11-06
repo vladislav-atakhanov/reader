@@ -1,22 +1,5 @@
 <script>
 import { books } from "../../store";
-
-function submit(files) {
-	for (const file of files) {
-		const reader = new FileReader()
-		const id = file.name
-
-		reader.readAsText(file)
-		reader.onload = e => {
-			const data = reader.result
-
-			books.add(id, {
-				data, inited: false
-			})
-		}
-	}
-}
-
 </script>
 
 
@@ -25,7 +8,13 @@ function submit(files) {
 	class="drag"
 	>
 		<h1 class="drag__title">Выберите файлы</h1>
-		<input type="file" on:input={e => submit(e.target.files)} multiple class="drag__input">
+		<input
+			type="file"
+			class="drag__input"
+			accept=".fb2"
+			multiple
+			on:input={e => books.addFiles(e.target.files)}
+		>
 	</label>
 </div>
 
@@ -43,7 +32,13 @@ function submit(files) {
 }
 .drag {
 	cursor: pointer;
-	padding: 5em;
+	width: 90%;
+	max-width: 448px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 2em 0;
 	border-style: dashed;
 	border-color: var(--text);
 	border-width: 3px;

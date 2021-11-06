@@ -1,0 +1,28 @@
+@font-face {
+    font-family: Jura;
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(./fonts/Jura/Jura-Bold.ttf) format("opentype");
+}
+@font-face {
+    font-family: Jura;
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(./fonts/Jura/Jura-Light.ttf) format("opentype");
+}
+@font-face {
+    font-family: Jura;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(./fonts/Jura/Jura-Regular.ttf) format("opentype");
+}
+@font-face {
+    font-family: Jura;
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(./fonts/Jura/Jura-SemiBold.ttf) format("opentype");
+}

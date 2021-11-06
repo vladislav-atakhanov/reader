@@ -24,7 +24,7 @@ async function submit(e) {
 </script>
 
 <label class="add-book">
-	<input type="file" on:input="{submit}" multiple>
+	<input type="file" on:input="{submit}" multiple accept=".fb2">
 	<span class="btn btn--add {className}">
 		+
 	</span>

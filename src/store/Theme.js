@@ -1,13 +1,15 @@
 import Store from "./Store"
 
+const width = Math.min(Math.floor(innerWidth * .9), 544)
+
 const _default = `{
 	"scheme": "sepia",
-	"book-width": 544,
-	"book-width-tmp": 544,
+	"book-width": ${width},
+	"book-width-tmp": ${width},
 	"book-height-tmp": 4,
 	"book-height": 4,
 	"font-weight": 400,
-	"font-family": "Roboto Slab",
+	"font-family": "RobotoSlab",
 	"font-size": 16
 }`
 const theme = localStorage.getItem("theme") || _default

@@ -15,6 +15,26 @@ class Books extends Store {
 		})
 	}
 
+	addFiles(files) {
+		for (const file of files) {
+			const id = file.name
+			if (!file.name.endsWith(".fb2")) {
+				console.log(id + " not fictionbook");
+				continue
+			}
+
+			const reader = new FileReader()
+
+			reader.readAsText(file)
+			reader.onload = e => {
+				const data = reader.result
+				this.add(id, {
+					data, inited: false
+				})
+			}
+		}
+	}
+
 	async update() {
 		const text = await fetch("books.txt").then(data => data.text())
 		const ArrayOfId = [...text.split("\n")].map(id => id.trim())

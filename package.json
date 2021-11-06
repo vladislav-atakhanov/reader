@@ -1,11 +1,11 @@
 {
-	"name": "svelte-app",
+	"name": "reader",
 	"version": "1.0.0",
 	"private": true,
 	"scripts": {
 		"build": "rollup -c && npm run styles",
 		"dev": "rollup -c -w",
-		"start": "sirv public --no-clear",
+		"start": "sirv docs --no-clear",
 		"styles": "npx postcss ./src/styles/index.css --use postcss-import --use postcss-csso --no-map --output docs/index.min.css"
 	},
 	"devDependencies": {

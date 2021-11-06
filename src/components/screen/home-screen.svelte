@@ -5,22 +5,6 @@ import BookSelect from "../book/book-select.svelte"
 import Dropper from "../dropper.svelte"
 import { books } from "../../store"
 
-function submit(files) {
-	for (const file of files) {
-		const reader = new FileReader()
-		const id = file.name
-
-		reader.readAsText(file)
-		reader.onload = e => {
-			const data = reader.result
-
-			books.add(id, {
-				data, inited: false
-			})
-		}
-	}
-}
-
 function dragover() {
 	document.body.classList.add("drag--active")
 }
@@ -30,7 +14,7 @@ function dragleave() {
 }
 function drop(e) {
 	document.body.classList.remove("drag--active")
-	submit(e.dataTransfer.files)
+	books.addFiles(e.dataTransfer.files)
 }
 
 
